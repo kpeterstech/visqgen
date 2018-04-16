@@ -49,7 +49,7 @@ The user is asked 3 questions. What values they want for the X-axis, what values
 
 `Please enter in the values you want on your Y axis (leave blank to input same values as X): <Enter>`
 
-`How many places to the left do you want to initially shift the row? (leave blank for a default of 0): <Enter>`
+`How many places do you want to initially shift the row? (leave blank for a default of 0): <Enter>`
 
 Result:
 
@@ -68,7 +68,7 @@ Result:
 
 `Please enter in the values you want on your Y axis (leave blank to input same values as X): <Enter>`
 
-`How many places to the left do you want to initially shift the row? (leave blank for a default of 0): 2`
+`How many places do you want to initially shift the row? (leave blank for a default of 0): 2`
 
 Result:
 
@@ -87,7 +87,7 @@ Result:
 
 `Please enter in the values you want on your Y axis (leave blank to input same values as X): <Enter>`
 
-`How many places to the left do you want to initially shift the row? (leave blank for a default of 0): <Enter>`
+`How many places do you want to initially shift the row? (leave blank for a default of 0): <Enter>`
 
 | |a|b|c| |*|!|1|2|3|
 |-|-|-|-|-|-|-|-|-|-|
@@ -121,7 +121,7 @@ As we can see the prompt for the values that will go onto the Y-axis is identica
 
 The last prompt is as follows:
 
-`How many places to the left do you want to initially shift the row? (leave blank for a default of 0):`
+`How many places do you want to initially shift the row? (leave blank for a default of 0):`
 
 We will cover shifting rows later on. For now all we need to do is press `<Enter>` and have our table built for us.
 
@@ -152,7 +152,7 @@ The last prompt asks if you would like to go again. If you press `y` you will go
 
 #### Shifting Rows <a name="shifting-rows"></a>
 
-For creation of more advanced tables a user might which to shift rows over. Visqgen allows users to do this. When asked how many rows visqgen should shift over in the third prompt, simply enter in how many are desired and it will move them over to the left that amount. For a visual see Example 2 under the Short Example section.
+For creation of more advanced tables a user might want to shift rows over. Visqgen allows users to do this. When asked how many rows visqgen should shift over in the third prompt, simply enter in how many places over are desired. A positive number shifts to the left, a negative number shifts to the right. For a visual see Example 2 under the Short Example section.
 
 #### Installing <a name="installing"></a>
 

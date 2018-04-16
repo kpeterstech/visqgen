@@ -106,7 +106,7 @@ def get_XY():
         y = x
 
     shift = input(
-        "How many places to the left do you want to initially shift the row? (leave blank for a default of 0): ")
+        "How many places do you want to initially shift the row? (leave blank for a default of 0): ")
     if shift == '':
         shift = 0
     else:
