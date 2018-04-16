@@ -1,5 +1,34 @@
 ## VIgenere SQuare GENerator
 
+
+### Table of Contents
+1. [What is a Vigenere Square](#### What is a Vigenere Square?)
+2. [What is VISQGEN?](#### What is VISQGEN)
+3. [How does it work?](#### How does it work?)
+4. [Short Examples](#### Short Examples)
+
+  a. [Example 1: Basic Table](###### Example 1: Basic Table)
+
+  b. [Example 2: Basic Table with Shifting](######Example 2: Basic Table with Shifting)
+
+  c. [Eample 3: Table with Special Characters](###### Example 3: Table with Special Characters)
+
+5. [Long Example](#### Long Example)
+
+6. [Shifting Rows](#### Shifting Rows)
+
+7. [Installing](#### Installing)
+
+  a. [Native Python](###### Native Python)
+
+  b. [Docker](###### Docker)
+
+  c. [Docker: Linux](###### Docker: Linux)
+
+  d. [Docker: Windows](###### Docker: Windows)
+
+
+
 #### What is a Vigenere Square?
 
 [The Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers based on the letters of a keyword. It is a form of polyalphabetic substitution.
@@ -72,7 +101,7 @@ Result:
 |2|2|3|a|b|c| |*|!|1|
 |3|3|a|b|c| |*|!|1|2|
 
-#### Long Examples
+#### Long Example
 
 There is no better way to learn how this program works than to just see the program in action. Since Vigenere squares can get quite large, the examples will be kept short, but hopefully with enough meat that you understand how the program works.
 
@@ -115,13 +144,13 @@ This command line tool is helpful to build you a quick table, but for futher tab
 
 After pressing `y` the next prompt gives you the chance to name the file whatever you would like. If you have a certain name in mind all you need to do is enter it in. If you are in a hurry, or don't care what the name is, visqgen will name the file for you. Press `<Enter>`.
 
-Just like that a .czv file with your table was saved into the current directory you are in.
+Just like that a .csv file with your table was saved into the current directory you are in. Go ahead and import to the spreadsheet program of your choice.
 
 `Would you like to create another table? (y/n):`
 
 The last prompt asks if you would like to go again. If you press `y` you will go through the exact same process and be able to create another table. If you wish to stop simply press `n` and the program will terminate.
 
-#### Shifting rows
+#### Shifting Rows
 
 For creation of more advanced tables a user might which to shift rows over. Visqgen allows users to do this. When asked how many rows visqgen should shift over in the third prompt, simply enter in how many are desired and it will move them over to the left that amount. For a visual see Example 2 under the Short Example section.
 
@@ -133,6 +162,75 @@ If you already have Python on your machine, all you need to do is download the v
 
 ###### Docker
 
-To avoid confliction with depednencies and for maximum cross platform support, Docker is the best way to go. In this project is a Dockerfile that will get you up and running as soon as possible
+To avoid confliction with depednencies and to maximize cross platform support, Docker is the best way to go. In this project is a Dockerfile that will get you up and running as soon as possible
 
 ###### Docker: Linux
+
+First you need to install docker. These steps will be for Ubuntu 16.04. If you are not using a distro that is within the Ubuntu family then some changes might need to be made.
+
+1) First, add the GPG key for the official Docker repository to the system:
+
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+
+2) Add the Docker repository to APT sources:
+
+`sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+
+3) Update
+
+`sudo apt-get update`
+
+4) Install Docker-ce
+
+`sudo apt-get install -y docker-ce`
+
+
+Once Docker is installed navigate to the directory you wish to save visqgen and either clone it with git or download the zip file
+
+Clone:
+
+`git clone https://github.com/kpeterstech/visqgen.git`
+
+Zip:
+
+`wget 'https://github.com/kpeterstech/visqgen/archive/master.zip'`
+
+`unzip -x master.zip`
+
+`cd visqgen-master`
+
+Once inside insure that visqgen.py has execute privileges with `chmod +x visqgen.py`
+
+Make sure that the visqgen image is built with:
+
+`docker build -t visqgen .`
+
+To run visqgen with docker run the following command from you shell
+
+`docker run -it --rm -v "$PWD":/app:rw visqgen`
+
+###### Docker: Windows
+
+To install Docker on Windows first download the "Docker for Windows.exe". Official step by step instructions can be found at [the docker website](https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows). If you wish to download the .exe directly copy and paste the following link in your browser.
+
+`https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe`
+
+Once the .exe is downloaded install docker by double clicking on it and follow the install wizard.
+
+Once installation is complete open up either Command Prompt or Powershell and run `docker --version` to make sure docker was installed correctly. If docker has installed correctly you should see output similar to `> Docker version 18.03.0-ce, build 0520e24`
+
+If docker was installed correctly, download visqgen by clicking on the green button on the top of this page that says "Clone or download". After clicking on the button select download zip.
+
+Extract the .zip. You should see a folder named `visqgen-master`. Make sure this folder is in your `Downloads` folder. Once you make sure it is placed there run the following command in Command prompt. Make sure to replace `<username>` with your username.
+
+`cd C:\Users\<username>\Downloads\visqgen-master`
+
+Once there run
+
+`docker build -t visqgen .`
+
+Then
+
+`docker run -it --rm -v C:\Users\<username>\Downloads\visqgen-master:/app:rw visqgen`
+
+You should now be using visqgen.
