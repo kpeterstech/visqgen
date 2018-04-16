@@ -2,12 +2,12 @@
 
 
 ### Table of Contents
-1. [What is a Vigenere Square](#### What is a Vigenere Square?)
-2. [What is VISQGEN?](#### What is VISQGEN)
-3. [How does it work?](#### How does it work?)
-4. [Short Examples](#### Short Examples)
+1. [What is a Vigenere Square](#whatis)
+2. [What is VISQGEN?](# What is VISQGEN)
+3. [How does it work?](# How does it work?)
+4. [Short Examples](# Short Examples)
 
-  a. [Example 1: Basic Table](###### Example 1: Basic Table)
+  a. [Example 1: Basic Table](# Example 1: Basic Table)
 
   b. [Example 2: Basic Table with Shifting](######Example 2: Basic Table with Shifting)
 
@@ -29,7 +29,7 @@
 
 
 
-#### What is a Vigenere Square?
+#### What is a Vigenere Square? <a name="whatis"></a>
 
 [The Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers based on the letters of a keyword. It is a form of polyalphabetic substitution.
 
