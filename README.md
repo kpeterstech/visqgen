@@ -68,7 +68,7 @@ Result:
 
 `Please enter in the values you want on your Y axis (leave blank to input same values as X): <Enter>`
 
-`How many places to the left you want to initially shift the row? (leave blank for a default of 0): 2`
+`How many places to the left do you want to initially shift the row? (leave blank for a default of 0): 2`
 
 Result:
 
@@ -142,7 +142,7 @@ This command line tool is helpful to build you a quick table, but for futher tab
 
 `Enter the name you want to save the file as (if blank it will be saved as 'visqgen-YYYY-MM-DD-HH:MM:SS.csv'):`
 
-After pressing `y` the next prompt gives you the chance to name the file whatever you would like. If you have a certain name in mind all you need to do is enter it in. If you are in a hurry, or don't care what the name is, visqgen will name the file for you. Press `<Enter>`.
+After pressing `y` the next prompt gives you the chance to name the file whatever you would like. If you have a certain name in mind all you need to do is type it in. If you are in a hurry, or don't care what the name is, visqgen will name the file for you. Press `<Enter>`.
 
 Just like that a .csv file with your table was saved into the current directory you are in. Go ahead and import to the spreadsheet program of your choice.
 
