@@ -2,48 +2,48 @@
 
 
 ### Table of Contents
-1. [What is a Vigenere Square](#whatis)
-2. [What is VISQGEN?](# What is VISQGEN)
-3. [How does it work?](# How does it work?)
-4. [Short Examples](# Short Examples)
+1. [What is a Vigenere Square](#what-is-vigenere-square)
+2. [What is VISQGEN?](#what-is-visqgen)
+3. [How does it work?](#how-does-it-work)
+4. [Short Examples](#short-examples)
 
-  a. [Example 1: Basic Table](# Example 1: Basic Table)
+  a. [Example 1: Basic Table](#example-1)
 
-  b. [Example 2: Basic Table with Shifting](######Example 2: Basic Table with Shifting)
+  b. [Example 2: Basic Table with Shifting](#example-2)
 
-  c. [Eample 3: Table with Special Characters](###### Example 3: Table with Special Characters)
+  c. [Eample 3: Table with Special Characters](#example-3)
 
-5. [Long Example](#### Long Example)
+5. [Long Example](#long-example)
 
-6. [Shifting Rows](#### Shifting Rows)
+6. [Shifting Rows](#shifting-rows)
 
-7. [Installing](#### Installing)
+7. [Installing](#installing)
 
-  a. [Native Python](###### Native Python)
+  a. [Native Python](#install-native-python)
 
-  b. [Docker](###### Docker)
+  b. [Docker](#install-docker)
 
-  c. [Docker: Linux](###### Docker: Linux)
+  c. [Docker: Linux](#docker-install-linux)
 
-  d. [Docker: Windows](###### Docker: Windows)
+  d. [Docker: Windows](#docker-install-windows)
 
 
 
-#### What is a Vigenere Square? <a name="whatis"></a>
+#### What is a Vigenere Square? <a name="what-is-vigenere-square"></a>
 
 [The Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers based on the letters of a keyword. It is a form of polyalphabetic substitution.
 
-#### What is VISQGEN?
+#### What is VISQGEN? <a name="what-is-visqgen"></a>
 
 visqgen is short for "Vigenere Square Generator". It is a command line tool written in Python that is designed to help create a Vigenere Square for the user.
 
-#### How does it work?
+#### How does it work? <a name="how-does-it-work"></a>
 
 The user is asked 3 questions. What values they want for the X-axis, what values they want for the Y-axis, and how much they want to shift the rows. Then visqgen builds the table for them. If the user wants the X-axis and the Y-axis to be the same with no shift at all, then they only need to enter in one set of values. Visqgen even allows the user to save their table into a .csv file to allow for easy importing to their spreadsheet program of choice for further table manipulation.
 
-#### Short Examples
+#### Short Examples <a name="short-examples"></a>
 
-###### Example 1: Basic Table
+###### Example 1: Basic Table <a name="example-1"></a>
 
 `Please enter in the values you want on your X axis: abcdef`
 
@@ -62,7 +62,7 @@ Result:
 |e|e|f|a|b|c|d|
 |f|f|a|b|c|d|e|
 
-###### Example 2: Basic Table with Shifting
+###### Example 2: Basic Table with Shifting <a name="example-2"></a>
 
 `Please enter in the values you want on your X axis: abcdef`
 
@@ -81,7 +81,7 @@ Result:
 |e|a|b|c|d|e|f|
 |f|b|c|d|e|f|a|
 
-###### Example 3: Table with Special Characters
+###### Example 3: Table with Special Characters <a name="example-3"></a>
 
 `Please enter in the values you want on your X axis: abc *!123`
 
@@ -101,7 +101,7 @@ Result:
 |2|2|3|a|b|c| |*|!|1|
 |3|3|a|b|c| |*|!|1|2|
 
-#### Long Example
+#### Long Example <a name="long-example"></a>
 
 There is no better way to learn how this program works than to just see the program in action. Since Vigenere squares can get quite large, the examples will be kept short, but hopefully with enough meat that you understand how the program works.
 
@@ -150,21 +150,21 @@ Just like that a .csv file with your table was saved into the current directory 
 
 The last prompt asks if you would like to go again. If you press `y` you will go through the exact same process and be able to create another table. If you wish to stop simply press `n` and the program will terminate.
 
-#### Shifting Rows
+#### Shifting Rows <a name="shifting-rows"></a>
 
 For creation of more advanced tables a user might which to shift rows over. Visqgen allows users to do this. When asked how many rows visqgen should shift over in the third prompt, simply enter in how many are desired and it will move them over to the left that amount. For a visual see Example 2 under the Short Example section.
 
-#### Installing
+#### Installing <a name="installing"></a>
 
-###### Native Python
+###### Native Python <a name="install-native-python"></a>
 
-If you already have Python on your machine, all you need to do is download the visqgen.py file. Visqgen uses the standard Python library so no additional requirements are needed. The only requirement is python3.6 or greater.
+If you already have Python on your machine, all you need to do is download the visqgen.py file. Visqgen uses the standard Python library so no additional requirements are needed. The only requirement is python3.6 or greater. Simply ensure it has execute permissions with `chmod +x visqgen.py` then run `python3.6 visqgen.py`
 
-###### Docker
+###### Docker <a name="install-docker"></a>
 
 To avoid confliction with depednencies and to maximize cross platform support, Docker is the best way to go. In this project is a Dockerfile that will get you up and running as soon as possible
 
-###### Docker: Linux
+###### Docker: Linux <a name="docker-install-linux"></a>
 
 First you need to install docker. These steps will be for Ubuntu 16.04. If you are not using a distro that is within the Ubuntu family then some changes might need to be made.
 
@@ -209,7 +209,7 @@ To run visqgen with docker run the following command from you shell
 
 `docker run -it --rm -v "$PWD":/app:rw visqgen`
 
-###### Docker: Windows
+###### Docker: Windows <a name="docker-install-windows"></a>
 
 To install Docker on Windows first download the "Docker for Windows.exe". Official step by step instructions can be found at [the docker website](https://docs.docker.com/docker-for-windows/install/#download-docker-for-windows). If you wish to download the .exe directly copy and paste the following link in your browser.
 
