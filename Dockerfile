@@ -2,8 +2,6 @@ FROM python:3.6
 
 WORKDIR /app
 
-ADD . /app
+COPY visqgen.py /usr/local/bin/visqgen.py
 
-VOLUME ["/app"]
-
-CMD ["python", "visqgen.py"]
+CMD ["python", "/usr/local/bin/visqgen.py"]
